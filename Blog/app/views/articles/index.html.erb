@@ -1,0 +1,30 @@
+<h2>Articulos</h2>
+<br/>
+<p class="btn btn-success"><%= link_to "Nuevo", "/articles/new"%></p>
+<br/><br/>
+<table class="table table-striped table-responsive">
+  <tr class="info">
+    <th><%= t('articles.title') %></th>
+    <th><%= t('articles.body') %></th>
+    <th width="10%"><%= t('articles.controls') %></th>
+  </tr>
+  <% @articles.each do |article|%>
+   <tr>
+      <td><%= article.title %></td>
+      <td><%= article.body %></td>
+     <td>
+       <div class="row">
+         <div class="col-lg-4 col-md-4 col-xs-4 col-sm-4">
+           <%= link_to "", article, class: "fa fa-eye"%>
+         </div>
+         <div class="col-lg-4 col-md-4 col-xs-4 col-sm-4">
+           <%= link_to "", edit_article_path(@articles),class: "fa fa-pencil-square-o"%>
+         </div>
+         <div class="col-lg-4 col-md-4 col-xs-4 col-sm-4">
+           <%= link_to "",article, method: :delete , class: "fa fa-trash"%>
+         </div>
+       </div>
+     </td>
+    </tr>
+  <% end %>
+</table>

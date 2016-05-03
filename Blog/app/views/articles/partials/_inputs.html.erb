@@ -1,0 +1,30 @@
+<%= form_for(@article) do |f| %>
+    <% @article.errors.full_messages.each do |message| %>
+        <div class="alert alert-danger" role="alert">
+          * <%= message %>
+          <button type="button" class="close" data-dismiss="alert">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Close</span>
+          </button>
+        </div>
+    <% end %>
+
+    <div class="row">
+      <div class="col-lg-7">
+        <%= f.label :title %>
+        <%= f.text_field :title, class: "form-control" %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <%= f.label :body %>
+        <%= f.text_area :body, class: "form-control" %>
+      </div>
+    </div>
+    <br/><br/>
+    <div class="row">
+      <div class="col-lg-3">
+        <p><%= f.submit "Guardar", class: "btn btn-large btn-success" %></p>
+      </div>
+    </div>
+<% end %>

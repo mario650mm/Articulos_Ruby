@@ -1,0 +1,25 @@
+<h2>Perfil de Artículo</h2>
+<br/>
+<div class="col-lg-10">
+  <%= link_to "Editar ", edit_article_path(@article), class: "fa fa-pencil-square-o"%>
+  </br>
+  <h3><%= @article.title %></h3>
+  <table cellspacing="10" width="100%">
+    <tr>
+      <td valign="top" width="20%">
+        <p><b>Cuerpo</b></p>
+      </td>
+      <td width="80%">
+        <p><%= @article.body %></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" width="20%">
+        <p><b>Visitas</b></p>
+      </td>
+      <td width="80%">
+        <p><%= @article.visits_count %></p>
+      </td>
+    </tr>
+  </table>
+</div>

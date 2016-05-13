@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   scope '/(:locale)', defaults: { locale: 'en' }, constraints: { locale: /en|es/ } do
   resources :articles
   get  "welcome/index"

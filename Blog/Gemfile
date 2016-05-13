@@ -43,4 +43,7 @@ gem 'awesome_print'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+# 
+# Gema para autenticación de usuario
+gem "devise"
 

@@ -13,6 +13,8 @@
 </head>
 <body>
   <%= render 'generals/navs/navbar' %>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
 <div class="customizer-container">
   <% flash.each do |key, value| %>
     <p><%= value %></p>
